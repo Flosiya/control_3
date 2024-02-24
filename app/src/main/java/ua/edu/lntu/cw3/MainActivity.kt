@@ -10,6 +10,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import ua.edu.lntu.cw3.ui.theme.IPZ_CR_3Theme
+import androidx.compose.material3.Text
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +38,11 @@ fun UserList(users: List<User>) {
             UserItem(user = user)
         }
     }
+}
+
+@Composable
+fun UserItem(user: User) {
+    Text(text = "User ID: ${user.id}, Name: ${user.name}")
 }
 
 
