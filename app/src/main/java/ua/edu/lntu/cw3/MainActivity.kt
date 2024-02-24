@@ -21,4 +21,11 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+data class User(val id: Int, val name: String)
+
+fun generateUserList(): List<User> {
+    return (1..3).map { User(it, "User $it") }
+}
+
+
 
